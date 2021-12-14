@@ -5,7 +5,7 @@ import CrewPic from '../images/ACPcrew.jpeg'
 
 export default function Header() {
     return (
-        <header className='antialiased pt-36'>
+        <header className='antialiased pt-36 mb-10'>
             
             {/* Header Container */}
             <div className='px-5 mb-5'>
@@ -21,8 +21,8 @@ export default function Header() {
                 
                 {/* Learn and Contact Buttons */}
                 <div className='flex flex-col py-5 space-y-3'>
-                    <button className='focus:outline-none active:shadow-lg hover:bg-blue-600 bg-blue-500 py-2 rounded-lg text-gray-50'>Contact Us</button>
-                    <button className='focus:outline-none active:shadow-lg hover:bg-blue-300 bg-blue-200 py-2 rounded-lg text-blue-500'>Learn More</button>
+                    <button className='focus:outline-none active:shadow-lg hover:bg-blue-600 bg-blue-500 py-3 rounded-lg text-gray-50'>Contact Us</button>
+                    <button className='focus:outline-none active:shadow-lg hover:bg-blue-300 bg-blue-200 py-3 rounded-lg text-blue-500'>Learn More</button>
                 </div>
             </div>
 
