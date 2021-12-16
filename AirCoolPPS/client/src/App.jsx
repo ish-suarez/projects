@@ -1,25 +1,27 @@
-import React, {lazy, Suspense} from 'react';
+import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import Spinner from './components/Spinner';
 
-const NavBar = lazy(() => import('./components/NavBar'));
-const Home = lazy(() => import('./components/Home'))
+import Home from './components/Home';
+import NavBar from './components/NavBar';
+import Gallery from './components/Gallery';
+import ContactUs from './components/ContactUsForm';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
     <div className=" bg-white h-screen">
-      <Suspense fallback={<Spinner />} >
-        {/* NavBar */}
         <NavBar />
-
-        <Routes>
+        {/* NavBar */}
+        
+        {/* Site Routes */}
+        <Routes>  
           <Route path='/' element={<Home />}/>
+          <Route path='/Gallery' element={<Gallery />} />
+          <Route path='/ContactUs' element={<ContactUs />} />
         </Routes>
-        {/* Page Header */}
 
-
-
-      </Suspense>
+        {/* Footer */}
+        <Footer />
     
     </div>
   );

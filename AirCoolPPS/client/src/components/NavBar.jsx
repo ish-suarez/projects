@@ -10,13 +10,13 @@ export default function NavBar() {
     const [nav, setNav] = useState(false);
 
 
+
     // nav Content
     const navigation = [
         {name: 'Home', to: '/'},
-        {name: 'Residential', to: '/Residential'},
-        {name: 'Commercial', to: '/Commercial'},
-        {name: 'Video', to: '/Video'}, 
-        {name: 'Contact', to: '/Contact'}
+        {name: 'Services', to: '/Services'}, 
+        {name: 'Gallery', to: '/Gallery'},
+        {name: 'Contact Us', to: '/ContactUs'}
     ]
 
     
@@ -33,7 +33,15 @@ export default function NavBar() {
             <Collapse  isOpened={nav}>
                 <div className='w-full py-5 shadow-md ReactCollapse--collapse bg-gray-100 border-b-2 border-blue-400'>
                     <ul className='relative'>
-                        {navigation.map(({name, to, i}) => (<li className='text-right pr-2 p-3 hover:bg-white'><NavLink  className={({isActive}) => isActive ? 'text-right p-3 text-blue-500' : 'text-right p-3 hover:bg-white'}  to={to} key={i} id={name} >{name}</NavLink></li>  ))}
+                        {
+                            navigation.map(({name, to}, i) => (
+                                <li key={i} className='text-right pr-2 p-3 hover:bg-white'>
+                                    <NavLink onClick={() => setNav(!nav)}  className={({isActive}) => isActive ? 'text-right p-3 text-blue-500' : 'text-right p-3 hover:bg-white'}  to={to} id={name} >
+                                        {name}
+                                    </NavLink>
+                                </li>  
+                            ))
+                        }
                     </ul>
                 </div>
 

@@ -25,8 +25,19 @@ export default function Commercial() {
                 </p>
             </div>
 
-            {commercialImages.map(image => <img className='my-10 drop-shadow-xl' src={image} alt='Commercial Work' />)}
+            <div className='mb-10 mt-20' >
+                    <div class="max-w-xs mx-auto bg-white rounded-xl p-5 drop-shadow-2xl m-2">
+                        <div class=' flex mt-10 mb-5'>
+                            <img className='mx-auto' src='https://img.icons8.com/ios/65/000000/low-price.png' alt='lower price' />
+                            <div class="">
+                                <h3 class="font-semibold text-center text-2xl uppercase">Lower your energy cost</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+            {commercialImages.map((image, i) => <img key={i} className='my-10 drop-shadow-xl' src={image} alt='Commercial Work' />)}
+            
         </div>
     );
 }

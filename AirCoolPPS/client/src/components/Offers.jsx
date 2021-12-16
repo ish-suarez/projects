@@ -31,9 +31,9 @@ export default function Offers() {
     ]
 
     return(
-        <div>
-            {offers.map((offer) => (
-                <div className='mb-10' >
+        <div className='mb-32 mt-16'>
+            {offers.map((offer, i) => (
+                <div className='mb-10' key={i} >
                     <div class="max-w-xs mx-auto bg-white rounded-xl p-5 drop-shadow-2xl m-2">
                         <div class='mt-10 flex items-center space-x-3'>
                             <img src={offer.image} alt={`${offer.offer} icon`} />

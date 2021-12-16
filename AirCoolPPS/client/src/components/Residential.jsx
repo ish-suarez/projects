@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
+
+import Spinner from './Spinner';
 import Residential1 from '../images/ACPunit1.jpeg';
 import Residential2 from '../images/ACPunit2.jpeg';
+
+
+const AcServices = lazy(() => import('./acServices'));
+const Thermostat = lazy(() => import('./Thermostat'));
 
 export default function Residential() {
 
     const images = [Residential1, Residential2]
 
+    
+
     return(
         <div>
+            {/* Residential Overview */}
             <div className='px-5 text-center mb-10'>
                 <h2 className='text-3xl font-extrabold text-grayBlue-600' >Our Services</h2>
             </div>
@@ -24,8 +33,17 @@ export default function Residential() {
                 </p>
             </div>
             
-            {images.map(image => (<img className='my-10 drop-shadow-xl' src={image} alt='Air conditioning residential service' />))}
+
+            {/* Home AC units */}
+            {images.map((image, i) => (<img key={i} className='my-10 drop-shadow-xl w-full mx-auto' src={image} alt='Air conditioning residential service' />))}
+
+            <Suspense fallback={<Spinner />} >
+                <AcServices />
+                <Thermostat />
+            </Suspense>
+            
+            
 
         </div>
-    )
+    );
 }

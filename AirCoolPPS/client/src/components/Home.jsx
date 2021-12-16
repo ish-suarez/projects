@@ -6,24 +6,22 @@ const WhyUs = lazy(() => import('./WhyUs'));
 const Offers = lazy(() => import('./Offers'));
 const AboutUs = lazy(() => import('./AboutUs'));
 const Services = lazy(() => import('./Services'));
-const ContactUs = lazy(() => import('./ContactUs'));
-
-
+const ContactUs = lazy(() => import('./ContactUsForm'));
 
 export default function Home() {
 
     return (
         <main className='w-screen'>
-            <Suspense fallback={<Spinner />} >
-                
-                <Header />
-                <WhyUs />
-                <Offers />
-                <AboutUs />
-                <Services />
-                <ContactUs />
+            <Header />
+            <WhyUs />
+                <Suspense fallback={<Spinner />} >
+                    
+                    <Offers />
+                    <Services />
 
-            </Suspense>
+                </Suspense>
+            <AboutUs />
+            <ContactUs />
 
         </main>
     );
