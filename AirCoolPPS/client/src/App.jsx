@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Gallery from './components/Gallery';
-import ContactUs from './components/ContactUsForm';
+import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
 export default function App() {
