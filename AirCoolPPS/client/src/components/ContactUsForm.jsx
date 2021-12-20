@@ -5,7 +5,8 @@ export default function ContactUs() {
 
     // Use State Hook for input and Initial State
     const initialInput = {
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         phone: parseInt() || '',
         message: ''
@@ -34,21 +35,31 @@ export default function ContactUs() {
     };
     
     // Inputs for Form
-    const {name, email, phone, message} = input;
+    const {firstName, lastName, email, phone, message} = input;
 
     return(
-        <div>
-            <h2 className='text-3xl font-extrabold text-center mb-5'>Contact us</h2>
-            <form className='text-center flex flex-col space-y-10 px-5 border py-8'>
-                <input className='rounded-md drop-shadow-lg focus:bg-white focus:drop-shadow-none active:outline-none bg-blueGray-200 border py-3 px-2' 
-                    name='name'
+        <div className='mt-20'>
+            <h2 className='text-3xl font-extrabold text-center text-blue-500 mb-5'>
+                Contact us
+            </h2>
+            <form className='text-center flex flex-col space-y-10 px-5 py-8'>
+                <input className='rounded-md drop-shadow-lg focus:ring-0 focus:drop-shadow-xl border-0 focus:bg-gray-100 focus:drop-shadow-none focus:outline-none bg-blueGray-200 border py-3 px-2' 
+                    name='firstName'
                     type="text"
                     onChange={handelChange}
-                    value={name}
-                    placeholder='Your Name'
+                    value={firstName}
+                    placeholder='First Name'
                     required
                 />
-                <input className='rounded-md drop-shadow-lg focus:bg-white focus:drop-shadow-none active:outline-none bg-blueGray-200 border py-3 px-2'
+                <input className='rounded-md drop-shadow-lg focus:ring-0 focus:drop-shadow-xl border-0 focus:bg-gray-100 focus:drop-shadow-none focus:outline-none bg-blueGray-200 border py-3 px-2' 
+                    name='lastName'
+                    type="text"
+                    onChange={handelChange}
+                    value={lastName}
+                    placeholder='Last Name'
+                    required
+                />
+                <input className='rounded-md drop-shadow-lg focus:ring-0 focus:drop-shadow-xl border-0 focus:bg-gray-100 focus:drop-shadow-none focus:outline-none bg-blueGray-200 border py-3 px-2'
                     name='email'
                     type="email"
                     onChange={handelChange}
@@ -56,7 +67,7 @@ export default function ContactUs() {
                     placeholder='example@youremail.com'
                     required
                 />
-                <input className='rounded-md drop-shadow-lg focus:bg-white focus:outline-none focus:drop-shadow-none active:outline-none bg-blueGray-200 border py-3 px-2'
+                <input className='rounded-md drop-shadow-lg focus:ring-0 focus:drop-shadow-xl border-0 focus:bg-gray-100 focus:drop-shadow-none focus:outline-none bg-blueGray-200 border py-3 px-2'
                     name='phone'
                     type="tel"
                     onChange={handelChange}
@@ -64,7 +75,7 @@ export default function ContactUs() {
                     placeholder='832-000-2222'
                     required
                 />
-                <textarea className='rounded-md focus:border-0 drop-shadow-lg focus:bg-white focus:drop-shadow-none active:outline-none bg-blueGray-200 border py-3 px-2'
+                <textarea className='rounded-md drop-shadow-lg focus:ring-0 focus:drop-shadow-xl border-0 focus:bg-gray-100 focus:drop-shadow-none focus:outline-none bg-blueGray-200 border py-3 px-2'
                     name='message'
                     type='text'
                     onChange={handelChange}

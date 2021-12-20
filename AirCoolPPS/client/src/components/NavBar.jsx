@@ -4,11 +4,10 @@ import {Collapse} from 'react-collapse'
 import Logo from '../icons/ACPlogo.svg';
 
 
-
 export default function NavBar() {
     // Toggle Navbar
     const [nav, setNav] = useState(false);
-
+    
 
 
     // nav Content
@@ -35,8 +34,8 @@ export default function NavBar() {
                     <ul className='relative'>
                         {
                             navigation.map(({name, to}, i) => (
-                                <li key={i} className='text-right pr-2 p-3 hover:bg-white'>
-                                    <NavLink onClick={() => setNav(!nav)}  className={({isActive}) => isActive ? 'text-right p-3 text-blue-500' : 'text-right p-3 hover:bg-white'}  to={to} id={name} >
+                                <li key={i} onClick={() => setNav(!nav)} className='text-right pr-2 p-3 hover:bg-white'>
+                                    <NavLink className={({isActive}) => isActive ? 'text-right p-3 text-blue-500' : 'text-right p-3 hover:bg-white'}  to={to} id={name} >
                                         {name}
                                     </NavLink>
                                 </li>  
