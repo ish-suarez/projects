@@ -15,9 +15,9 @@ export default function Residential() {
     
 
     return(
-        <div>
+        <div id='Residential' className='pt-20'>
             {/* Residential Overview */}
-            <div className='px-5 text-center mb-10'>
+            <div className='px-5 text-center  mb-10'>
                 <h2 className='text-3xl font-extrabold text-grayBlue-600' >Our Services</h2>
             </div>
             <div className='px-5 mb-5'>

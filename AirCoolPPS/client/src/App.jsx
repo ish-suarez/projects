@@ -10,8 +10,8 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <div className="antialiased  bg-white h-screen">
-        <NavBar />
         {/* NavBar */}
+        <NavBar />
         
         {/* Site Routes */}
         <Routes>  

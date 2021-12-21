@@ -8,7 +8,7 @@ export default function Commercial() {
     const commercialImages = [Commercial1, Commercial2];
 
     return(
-        <div>
+        <div id='Commercial' className='pt-20'>
             <div className='px-5 mb-5'>
                 <div className='flex items-center mb-5'>
                     <img className='mr-5' src="https://img.icons8.com/external-others-phat-plus/64/000000/external-conservation-ecology-outline-others-phat-plus.png" alt='Conservation building'/>

@@ -38,7 +38,7 @@ export default function ContactUs() {
     const {firstName, lastName, email, phone, message} = input;
 
     return(
-        <div className='mt-20'>
+        <div className='mt-20 pt-24'>
             <h2 className='text-3xl font-extrabold text-center text-blue-500 mb-5'>
                 Contact us
             </h2>

@@ -4,7 +4,7 @@ import CrewPic from '../images/ACPcrew1.jpeg'
 
 export default function AboutUs() {
     return (
-        <div className='container mb-10 mt-16'>
+        <div className='container mb-10 mt-10 pt-20'>
 
             <div className='px-5 mb-10'>
                 <h3 className='uppercase text-md text-center tracking-tight leading-10 text-blue-500'>Who are we?</h3>
