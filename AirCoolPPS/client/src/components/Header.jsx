@@ -27,7 +27,7 @@ export default function Header() {
                 {/* Learn and Contact Buttons */}
                 <div className='flex flex-col py-5 space-y-3'>
                     <button onClick={() => handleScroll({id: 'ContactUs'})} className='focus:outline-none active:shadow-lg hover:bg-blue-600 bg-blue-500 py-3 rounded-lg text-gray-50'>Contact Us</button>
-                    <button className='focus:outline-none active:shadow-lg hover:bg-blue-300 bg-blue-200 py-3 rounded-lg text-blue-500'>Learn More</button>
+                    <button onClick={() => handleScroll({id: 'WhyUs'})} className='focus:outline-none active:shadow-lg hover:bg-blue-300 bg-blue-200 py-3 rounded-lg text-blue-500'>Learn More</button>
                 </div>
             </div>
 

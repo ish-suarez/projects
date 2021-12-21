@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {NavHashLink} from '@xzar90/react-router-hash-link';
 import {Collapse} from 'react-collapse'
 import Logo from '../icons/ACPlogo.svg';
 
@@ -17,14 +18,15 @@ export default function NavBar() {
 
     // nav Content
     const navigation = [
-        {name: 'Home', toId: 'Header'},
-        {name: 'Why Us?', toId: 'WhyUs'},
-        {name: 'About Us', toId: 'AboutUs'},
-        {name: 'Services', toId: 'Services'},
-        {name: 'Residential', toId: 'Residential'},
-        {name: 'Commercial', toId: 'Commercial'}, 
-        {name: 'Gallery', toId: ''},
-        {name: 'Contact Us', toId: 'ContactUs'}
+        {name: 'Home', toId: '/#'},
+        {name: 'Why Us?', toId: '/#WhyUs'},
+        {name: 'About Us', toId: '/#AboutUs'},
+        {name: 'Services', toId: '/#Residential'},
+        {name: 'Residential', toId: '/#Residential'},
+        {name: 'Commercial', toId: '/#Commercial'}, 
+        {name: 'Contact Us', toId: '/#ContactUs'},
+        {name: 'Gallery', toId: '/Gallery'},
+        {name: 'Our Info', toId: '/ContactUs'}
     ]
     
 
@@ -32,7 +34,9 @@ export default function NavBar() {
     return (
         <nav className='top-0 fixed z-50 w-screen antialiased border-t-4 border-red-500 bg-white'>
             <div className=' w-screen flex items-center justify-between py-4'>
-                <img className='w-24 pl-6' src={Logo} alt="Air Cool PPS Logo" />
+                <NavHashLink smooth to='/#'>
+                    <img className='w-24 pl-6' src={Logo} alt="Air Cool PPS Logo" />
+                </NavHashLink>
 
                 {/* svg icon */}
                 <i onClick={() => setNav(!nav)} className='fas fa-bars mr-5 text-gray-700 rounded-lg text-lg cursor-pointer' ></i>
@@ -48,12 +52,13 @@ export default function NavBar() {
                                     onClick={() => setNav(!nav)} 
                                     className='text-right pr-2 p-3 hover:bg-white'
                                 >
-                                    <p 
-                                        className={'cursor-pointer hover:text-gray-500'} 
-                                        onClick={() => handleScroll({id: toId})}
+                                    <NavHashLink
+                                        smooth 
+                                        to={toId}
+                                        className={({isActive}) => isActive ? 'text-blue-500' : ''}
                                         >
-                                            <span >{name}</span>
-                                    </p>
+                                        {name}
+                                    </NavHashLink>
                                 </li>  
                             ))
                         }
