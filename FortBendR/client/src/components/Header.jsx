@@ -26,12 +26,12 @@ export default function Header() {
                         <br></br>
                         <span className='text-3xl text-blueGray-600'>Your <span className='text-yellow-600'>Roadside Assistance Needs</span></span>
                     </h2>
-                    <p className='mt-5 text-gray-500' >Serving Fort Bend counties, Greater Houston Area and surrounding counties. </p>
+                    <p className='mt-5 text-gray-500' >Serving Fort Bend county, Greater Houston Area and surrounding counties. </p>
                 </div>
                 
                 {/* Learn and Contact Scroll To Buttons */}
                 <div className='flex flex-col sm:flex-row py-5 sm:space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:justify-center '>
-                    <div className=''>
+                    <div id='Info' className='pt-3'>
                         <button 
                             onClick={() => setActiveContact(!activeContact)} 
                             className='w-full focus:outline-none active:shadow-lg hover:bg-red-600 bg-red-700 py-3 sm:py-4 sm:px-8 rounded-lg text-gray-50'

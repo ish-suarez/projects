@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Partners from './Partners';
-
 export default function Footer() {
     return(
         <div className='text-center'>

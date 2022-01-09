@@ -3,18 +3,11 @@ import {NavHashLink} from '@xzar90/react-router-hash-link';
 import {Collapse} from 'react-collapse'
 import Logo from '../icons/fb-logo.jpg';
 
-import {scrollTo} from './utils';
 
 
 export default function NavBar() {
     // Toggle Navbar
     const [nav, setNav] = useState(false);
-
-    // NavLink Active
-    const [active, setActive] = useState(false);
-
-    // scroll Click 
-    const handleScroll = id => scrollTo(id);
 
     // nav Content
     const navigation = [

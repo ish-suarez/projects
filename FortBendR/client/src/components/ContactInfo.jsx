@@ -21,7 +21,7 @@ export default function ContactInfo() {
     return(
         <div className='mt-5'>
 
-            <div id='Info' className='border bg-blueGray-100 px-5 py-4 mb-2 rounded-lg shadow-lg'>
+            <div className='border bg-blueGray-100 px-5 py-4 mb-2 rounded-lg shadow-lg'>
                 <ul className='py-3'>
                     {/* Phone Info */}
                     {
