@@ -31,7 +31,7 @@ export default function NavBar() {
                 <i onClick={() => setNav(!nav)} className='md:hidden fas fa-bars mr-5 text-gray-700 rounded-lg text-lg cursor-pointer' ></i>
 
                 {/* Larger Screen Navigation */}
-                <ul className='hidden md:visible md:flex text-blueGray-600 mx-5 space-x-8 text-lg'>
+                <ul className='hidden md:visible md:flex text-blueGray-600 mx-5 space-x-8 text-md'>
                     {navigation.map(({name, toId}, i) => (
                         <li key={i}>
                             <NavHashLink
