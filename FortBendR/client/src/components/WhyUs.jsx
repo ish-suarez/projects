@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WhyUs() {
     return (
-        <div className='sm:mx-auto container px-5 pt-12'>
+        <div className='sm:mx-auto container px-5 pt-10'>
             <h3 className='text-md text-center uppercase tracking-tight leading-10 text-red-600'>Why Choose Us?</h3>
             <p className='text-2xl text-center mb-5 tracking-tight font-extrabold text-blueGray-800'>We have your Roadside needs covered</p>
             <p className='text-sm tracking-tight leading-7 text-gray-500'>

@@ -1,4 +1,9 @@
-import React from 'react';
+import React, {lazy} from 'react';
+
+// Images 
+import vehicleWork from '../images/vehicleWork.jpeg'
+
+const OffersCard = lazy(() => import('./OffersCard'));
 
 export default function Offers() {
 
@@ -49,23 +54,17 @@ export default function Offers() {
                 <p className='text-3xl text-center font-semibold tracking-tight leading-10'>
                     <span className='text-red-600 font-extrabold'>Fort Bend Roadside Assistance</span> Services
                 </p>
-                
             </div>
-            {services.map(({offer, information, image}, i) => (
-                <div className='mb-10' key={i} >
-                    <div class="max-w-md sm:max-w-xl mx-auto bg-white rounded-xl p-5 drop-shadow-2xl m-2">
-                        <div class='flex items-center justify-around'>
-                            <img  src={image} alt={`${offer} icon`} />
-                            <div className=''>
-                                <h3 class="font-extrabold text-center text-2xl">{offer}</h3>
-                            </div>
-                        </div>
-                        <p className='text-sm text-gray-500 mt-2 text-center leading-6 sm:text-left sm:ml-20 '> 
-                            {information}
-                        </p>
-                    </div>
-                </div>
-            ))}
+            
+            {/* Offer Card Map */}
+            <div className='md:flex md:flex-wrap my-5'>
+                {services.map(({offer, information, image}, i) => <OffersCard key={i} offer={offer} information={information} image={image} />)}
+            </div>
+
+            {/* Filler Picture */}
+            <div className='sm:max-h-[250px] overflow-hidden'>
+                <img src={vehicleWork} alt='Working on car' />
+            </div>
         </div>
         
     );

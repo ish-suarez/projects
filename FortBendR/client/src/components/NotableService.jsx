@@ -32,7 +32,7 @@ export default function NotableService() {
     ]
 
     return (
-        <div className='px-5 py-5'>
+        <div className='px-5 pt-10'>
             {/* Header */}
             <div>
                 <h2 className='uppercase text-center text-red-600'>who have we provided service to?</h2>
@@ -41,7 +41,7 @@ export default function NotableService() {
             </div>
 
             {/* Card */}
-            <div className='py-5'>
+            <div className='py-10 sm:flex sm:flex-wrap sm:space-y-5 sm:items-center sm:justify-center'>
                 {companies.map(({name, image}, i) => <NotableCard key={i} image={image} name={name} />)}
             </div>
         </div>

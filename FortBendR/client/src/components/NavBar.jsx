@@ -28,8 +28,25 @@ export default function NavBar() {
                 </NavHashLink>
 
                 {/* svg icon */}
-                <i onClick={() => setNav(!nav)} className='fas fa-bars mr-5 text-gray-700 rounded-lg text-lg cursor-pointer' ></i>
+                <i onClick={() => setNav(!nav)} className='md:hidden fas fa-bars mr-5 text-gray-700 rounded-lg text-lg cursor-pointer' ></i>
+
+                {/* Larger Screen Navigation */}
+                <ul className='hidden md:visible md:flex text-blueGray-600 mx-5 space-x-8 text-lg'>
+                    {navigation.map(({name, toId}, i) => (
+                        <li key={i}>
+                            <NavHashLink
+                                smooth 
+                                to={toId}
+                                className=''
+                            >
+                                {name}
+                            </NavHashLink>
+                        </li>
+                    ))}
+                </ul>
             </div>
+
+            {/* Collapsed Navigation Content */}
             <Collapse  isOpened={nav}>
                 <div className='w-full py-5 shadow-md ReactCollapse--collapse bg-gray-100 border-b-2 border-red-500'>
                     <ul className='relative'>
@@ -43,7 +60,7 @@ export default function NavBar() {
                                     <NavHashLink
                                         smooth 
                                         to={toId}
-                                        className={({isActive}) => isActive ? 'text-red-600' : ''}
+                                        className={({isActive}) => isActive ? 'block text-red-600 ' : ''}
                                         >
                                         {name}
                                     </NavHashLink>

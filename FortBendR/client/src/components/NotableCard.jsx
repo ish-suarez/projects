@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function NotableCard({name, image}) {
     return(
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center sm:w-1/2 '>
             <img className='h-[100px]' src={image} alt={name} />
         </div>
     );

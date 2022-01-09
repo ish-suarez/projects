@@ -19,9 +19,9 @@ export default function ContactInfo() {
         ]
     }
     return(
-        <div className='mt-5'>
+        <div className=' ReactCollapse--collapse'>
 
-            <div className='border bg-blueGray-100 px-5 py-4 mb-2 rounded-lg shadow-lg'>
+            <div className='sm:w-[430px] sm:mt-5 border bg-blueGray-100 px-5 py-1 mb-2 rounded-lg shadow-lg'>
                 <ul className='py-3'>
                     {/* Phone Info */}
                     {

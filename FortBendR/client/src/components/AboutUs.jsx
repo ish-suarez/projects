@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function AboutUs() {
     return (
-        <div className='pt-5'>
+        <div className='pt-10'>
             <div className='px-5'>
                 <h3 className='uppercase text-md text-center tracking-tight leading-10 text-red-500'>Who are we?</h3>
                 <p className='text-2xl text-center tracking-tight mb-5 font-extrabold text-blueGray-800'> About <span className='text-red-600'>Fort Bend Roadside Assistance</span></p>

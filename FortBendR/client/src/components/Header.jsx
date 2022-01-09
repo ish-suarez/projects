@@ -15,12 +15,12 @@ export default function Header() {
     const [activeContact, setActiveContact] = useState(false);
 
     return (
-        <header className='antialiased pt-24'>
+        <header className='antialiased pt-20'>
             
             {/* Header Container */}
             <div className='px-5'>
                 
-                <div>
+                <div className='sm:text-center'>
                     <h2 className='relative text-4xl tracking-tight leading-10 font-extrabold text-red-700' >
                         Fort Bend Roadside Assistance
                         <br></br>
@@ -30,8 +30,8 @@ export default function Header() {
                 </div>
                 
                 {/* Learn and Contact Scroll To Buttons */}
-                <div className='flex flex-col sm:flex-row py-5 sm:space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:justify-center '>
-                    <div id='Info' className='pt-3'>
+                <div id='Info' className='w-full py-10 flex flex-col sm:flex-row py-5 space-y-3 sm:space-x-3 sm:space-y-0 sm:justify-center '>
+                    <div  className='sm:w-1/3'>
                         <button 
                             onClick={() => setActiveContact(!activeContact)} 
                             className='w-full focus:outline-none active:shadow-lg hover:bg-red-600 bg-red-700 py-3 sm:py-4 sm:px-8 rounded-lg text-gray-50'
@@ -42,11 +42,13 @@ export default function Header() {
                                 
                         </button>
                         {/* Collapse Contact Info */}
-                        <Collapse isOpened={activeContact}>
-                            <ContactInfo />
-                        </Collapse>
+                        <div className='sm:absolute z-50'>
+                            <Collapse isOpened={activeContact}>
+                                <ContactInfo />
+                            </Collapse>
+                        </div>
                     </div>
-                    <div>
+                    <div className='sm:w-1/3'>
                         <button 
                             onClick={() => handleScroll({id: 'WhyUs'})} 
                             className='w-full focus:outline-none active:shadow-lg hover:bg-yellow-300 bg-yellow-500 py-3 sm:py-4 sm:px-8 rounded-lg text-yellow-700'
@@ -55,10 +57,12 @@ export default function Header() {
                         </button>
                     </div>
                 </div>
+                
+                
             </div>
             {/* Image Container */}
-            <div>
-                <img className='w-full sm:h-[35rem]' src={FRAVehicle} alt="Air Cool PPS Crew" />
+            <div className='sm:drop-shadow-2xl max-h-[230px] sm:max-h-[400px] overflow-hidden'>
+                <img className='sm:drop-shadow-md' src={FRAVehicle} alt="Fort Bend RA vehicle" />
             </div>
         </header>
     );

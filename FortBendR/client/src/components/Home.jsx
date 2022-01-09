@@ -38,7 +38,6 @@ export default function Home() {
     ];
 
     // navRef
-    const navRef = useRef(null);
     const navReveal = useRef([]);
     navReveal.current = [];
 
