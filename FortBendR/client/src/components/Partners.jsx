@@ -40,7 +40,7 @@ export default function Partners() {
         <div id='Partners' className='text-center pt-10 px-5'>
             {/* Partners Header */}
             <div>
-                <p className='uppercase text-md text-red-500 mb-2'>who do we work with?</p>
+                <p className='uppercase text-md text-red-500 mb-2'>who are our partners?</p>
                 <h2 className='font-extrabold text-2xl mb-3'>Meet Our Trusted Partners</h2>
                 <p className='text-sm text-gray-600 mb-5'>We work with several local partners to provide you the services you need.</p>
             </div>

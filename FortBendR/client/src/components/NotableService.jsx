@@ -35,8 +35,8 @@ export default function NotableService() {
         <div className='px-5 pt-10'>
             {/* Header */}
             <div>
-                <h2 className='uppercase text-center text-red-600'>who have we provided service to?</h2>
-                <p className='text-center text-2xl my-3 font-extrabold'>Notable Services</p>
+                <h2 className='uppercase text-center text-red-600'>see who trusted our services</h2>
+                <p className='text-center text-2xl my-3 font-extrabold'>Notable Customers</p>
                 <h3 className='text-sm text-gray-500'>We have a solid reputation serving local businesses such as: Amazon, Enterprise, Metro Star and Martin's Famous Pastry Shoppe.</h3>
             </div>
 
