@@ -21,7 +21,7 @@ export default function Header() {
             <div className='px-5'>
                 
                 <div className='sm:text-center'>
-                    <h2 className='relative text-4xl tracking-tight leading-10 font-extrabold text-red-700' >
+                    <h2 className='relative text-5xl tracking-tight leading-10 font-extrabold text-red-700' >
                         Fort Bend Roadside Assistance
                         <br></br>
                         <span className='text-3xl text-blueGray-600'>Your <span className='text-yellow-600'>Roadside Assistance Needs</span></span>
