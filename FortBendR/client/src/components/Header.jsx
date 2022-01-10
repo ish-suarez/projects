@@ -30,7 +30,7 @@ export default function Header() {
                 </div>
                 
                 {/* Learn and Contact Scroll To Buttons */}
-                <div id='Info' className='w-full py-10 flex flex-col sm:flex-row py-5 space-y-3 sm:space-x-3 sm:space-y-0 sm:justify-center md:justify-start '>
+                <div id='Info' className='w-full py-10 flex flex-col sm:flex-row py-5 space-y-3 sm:space-x-3 sm:space-y-0 sm:justify-center lg:justify-start '>
                     <div  className='sm:w-1/3'>
                         <button 
                             onClick={() => setActiveContact(!activeContact)} 
