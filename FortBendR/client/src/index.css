@@ -6,3 +6,9 @@
 .ReactCollapse--collapse {
     transition: height 300ms;
 }
+
+@media (min-width: 1024px) {
+    .lg-clip {
+        clip-path: polygon(6% 0, 100% 0, 100% 100%, 20% 100%);
+    }
+}

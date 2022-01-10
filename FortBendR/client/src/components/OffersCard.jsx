@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function OffersCard({offer, information, image}) {
     return(
-        <div className='my-10 md:m-0' >
-            <div class="max-w-md sm:max-w-sm mx-auto rounded-xl p-5 drop-shadow-2xl m-2 md:m-0">
+        <div className='my-10 md:m-0 lg:mx-auto' >
+            <div class="max-w-md sm:max-w-sm lg:max-w-xs mx-auto rounded-xl p-5 drop-shadow-2xl m-2 md:m-0">
                 <div class='sm:px-10 flex items-center justify-around'>
                     <img  src={image} alt={`${offer} icon`} />
                     <div className=''>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PartnersCard({partner, image}) {
     return(
-        <div className='mb-10 w-2/5' >
+        <div className='mb-10 md:w-2/5 lg:w-2/6' >
             <div class=" mx-auto rounded-xl p-5">
                 <div class=' flex items-center justify-center'>
                     <img className='h-[85px]' src={image} alt={`${partner} icon`} />

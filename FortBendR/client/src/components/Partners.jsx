@@ -37,16 +37,16 @@ export default function Partners() {
     ]
 
     return(
-        <div id='Partners' className='text-center pt-10 px-5'>
+        <div id='Partners' className='lg:w-screen text-center lg:text-left pt-16 px-5 lg:flex lg:items-center'>
             {/* Partners Header */}
-            <div>
+            <div className='lg:w-1/3 xl:pl-28'>
                 <p className='uppercase text-md text-red-500 mb-2'>who are our partners?</p>
                 <h2 className='font-extrabold text-2xl mb-3'>Meet Our Trusted Partners</h2>
                 <p className='text-sm text-gray-600 mb-5'>We work with several local partners to provide you the services you need.</p>
             </div>
             
             {/* Partners container */}
-            <div className='mt-10 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:space-x-10'>
+            <div className='mt-10 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:space-x-10 lg:space-x-0 lg:w-2/3'>
                 {partners.map(({partner, image}, i) => <PartnersCard key={i} partner={partner} image={image} />)}
             </div>
         </div>

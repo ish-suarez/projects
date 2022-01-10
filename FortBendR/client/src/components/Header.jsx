@@ -15,12 +15,12 @@ export default function Header() {
     const [activeContact, setActiveContact] = useState(false);
 
     return (
-        <header className='antialiased pt-20'>
+        <header className='antialiased pt-20 lg:flex'>
             
             {/* Header Container */}
-            <div className='px-5'>
-                
-                <div className='sm:text-center'>
+            <div className='px-5 lg:w-1/2 xl:pl-28 2xl:pl-96'>
+                {/* Header Title and info */}
+                <div className='sm:text-center lg:text-left'>
                     <h2 className='relative text-5xl tracking-tight leading-10 font-extrabold text-red-700' >
                         Fort Bend Roadside Assistance
                         <br></br>
@@ -30,14 +30,14 @@ export default function Header() {
                 </div>
                 
                 {/* Learn and Contact Scroll To Buttons */}
-                <div id='Info' className='w-full py-10 flex flex-col sm:flex-row py-5 space-y-3 sm:space-x-3 sm:space-y-0 sm:justify-center '>
+                <div id='Info' className='w-full py-10 flex flex-col sm:flex-row py-5 space-y-3 sm:space-x-3 sm:space-y-0 sm:justify-center md:justify-start '>
                     <div  className='sm:w-1/3'>
                         <button 
                             onClick={() => setActiveContact(!activeContact)} 
                             className='w-full focus:outline-none active:shadow-lg hover:bg-red-600 bg-red-700 py-3 sm:py-4 sm:px-8 rounded-lg text-gray-50'
                             >
                                 <NavHashLink smooth to='/#Info'>
-                                    Contact Us Now
+                                    Contact Us
                                 </NavHashLink>
                                 
                         </button>
@@ -58,10 +58,10 @@ export default function Header() {
                     </div>
                 </div>
                 
-                
             </div>
+
             {/* Image Container */}
-            <div className='sm:drop-shadow-2xl max-h-[230px] sm:max-h-[400px] overflow-hidden'>
+            <div className='sm:drop-shadow-2xl max-h-[230px] sm:max-h-[400px] md:max-h-[420px] 2xl:max-h-[520px] lg:w-1/2 lg:object-cover lg:object-center lg-clip overflow-hidden'>
                 <img className='sm:drop-shadow-md' src={FRAVehicle} alt="Fort Bend RA vehicle" />
             </div>
         </header>

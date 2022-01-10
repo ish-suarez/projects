@@ -1,8 +1,5 @@
 import React, {lazy} from 'react';
 
-// Images 
-import vehicleWork from '../images/vehicleWork.jpeg'
-
 const OffersCard = lazy(() => import('./OffersCard'));
 
 export default function Offers() {
@@ -57,14 +54,10 @@ export default function Offers() {
             </div>
             
             {/* Offer Card Map */}
-            <div className='md:flex md:flex-wrap my-5'>
+            <div className='md:flex md:flex-wrap my-5 xl:mx-28 2xl:mx-96'>
                 {services.map(({offer, information, image}, i) => <OffersCard key={i} offer={offer} information={information} image={image} />)}
             </div>
 
-            {/* Filler Picture */}
-            <div className='sm:max-h-[250px] overflow-hidden'>
-                <img src={vehicleWork} alt='Working on car' />
-            </div>
         </div>
         
     );

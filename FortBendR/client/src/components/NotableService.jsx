@@ -32,16 +32,16 @@ export default function NotableService() {
     ]
 
     return (
-        <div className='px-5 pt-10'>
+        <div className=' px-5 pt-10 lg:w-screen lg:flex lg:flex-row-reverse lg:items-center'>
             {/* Header */}
-            <div>
-                <h2 className='uppercase text-center text-red-600'>see who trusted our services</h2>
-                <p className='text-center text-2xl my-3 font-extrabold'>Notable Customers</p>
-                <h3 className='text-sm text-gray-500'>We have a solid reputation serving local businesses such as: Amazon, Enterprise, Metro Star and Martin's Famous Pastry Shoppe.</h3>
+            <div className='lg:w-1/2 lg:pl-10 xl:px-24 xl:pr-48'>
+                <h2 className='uppercase text-center lg:text-left text-red-600'>see who trusted our services</h2>
+                <p className='text-center lg:text-left text-2xl my-3 font-extrabold'>Notable Customers</p>
+                <h3 className='text-sm lg:text-left lg:m-auto text-gray-500'>We have a solid reputation serving local businesses such as: Amazon, Enterprise, Metro Star and Martin's Famous Pastry Shoppe.</h3>
             </div>
 
             {/* Card */}
-            <div className='py-10 sm:flex sm:flex-wrap sm:space-y-5 sm:items-center sm:justify-center'>
+            <div className='lg:w-1/2 py-10 sm:flex sm:flex-wrap sm:space-y-5 lg:space-y-0 lg:justify-between sm:items-center sm:justify-center'>
                 {companies.map(({name, image}, i) => <NotableCard key={i} image={image} name={name} />)}
             </div>
         </div>
