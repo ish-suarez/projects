@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {lazy, useState} from 'react';
 import {NavHashLink} from '@xzar90/react-router-hash-link';
 import {Collapse} from 'react-collapse'
 import Logo from '../icons/fb-logo.jpg';
 
-
+// Components
+const NavBarCard = lazy(() => import('./NavBarCard'));
 
 export default function NavBar() {
     // Toggle Navbar
@@ -31,40 +32,18 @@ export default function NavBar() {
 
                 {/* Larger Screen Navigation */}
                 <ul className='hidden md:visible md:flex text-blueGray-600 mx-5 space-x-8 lg:space-x-5 text-md'>
-                    {navigation.map(({name, toId}, i) => (
-                        <li key={i}>
-                            <NavHashLink
-                                smooth 
-                                to={toId}
-                                className='hover:text-gray-400'
-                            >
-                                {name}
-                            </NavHashLink>
-                        </li>
-                    ))}
+                    {
+                        navigation.map(({name, toId}, i) => <NavBarCard key={i} name={name} toId={toId} /> )
+                    }
                 </ul>
             </div>
 
             {/* Collapsed Navigation Content */}
             <Collapse  isOpened={nav}>
-                <div className='w-full py-5 shadow-md ReactCollapse--collapse bg-gray-100 border-b-2 border-red-500'>
+                <div className='w-full md:hidden py-5 shadow-md ReactCollapse--collapse bg-gray-100 border-b-2 border-red-500'>
                     <ul className='relative'>
                         {
-                            navigation.map(({name, toId}, i) => (
-                                <li 
-                                    key={i} 
-                                    onClick={() => setNav(!nav)} 
-                                    className='text-right pr-2 p-3 hover:bg-white'
-                                >
-                                    <NavHashLink
-                                        smooth 
-                                        to={toId}
-                                        className='hover:text-gray-400'
-                                        >
-                                        {name}
-                                    </NavHashLink>
-                                </li>  
-                            ))
+                            navigation.map(({name, toId}, i) => <NavBarCard key={i} name={name} toId={toId} />)
                         }
                     </ul>
                 </div>
