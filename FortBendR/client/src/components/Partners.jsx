@@ -38,11 +38,12 @@ export default function Partners() {
 
     return(
         <div id='Partners' className='lg:w-screen text-center lg:text-left pt-16 px-5 lg:flex lg:items-center'>
+            
             {/* Partners Header */}
             <div className='lg:w-1/3 xl:pl-28'>
-                <p className='uppercase text-md text-red-500 mb-2'>who are our partners?</p>
-                <h2 className='font-extrabold text-2xl mb-3'>Meet Our Trusted Partners</h2>
-                <p className='text-sm text-gray-600 mb-5'>We work with several local partners to provide you the services you need.</p>
+                <p className='uppercase text-md sm:text-lg text-red-500 mb-2'>who are our partners?</p>
+                <h2 className='font-extrabold text-2xl sm:text-3xl mb-3'>Meet Our Trusted Partners</h2>
+                <p className='text-sm sm:text-lg text-gray-600 mb-5'>We work with several local partners to provide you the services you need.</p>
             </div>
             
             {/* Partners container */}

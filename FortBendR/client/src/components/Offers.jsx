@@ -8,19 +8,19 @@ export default function Offers() {
     const services = [
         {
             offer: 'Tire Repair',
-            information: 'Stuck on the road with a flat or in need of an emergency tire change? Give us a call. You can make an appointment for us to come out to you, at home or work.',
+            information: 'Stuck on the road with a flat or in need of an emergency tire change? Give us a call. You can make an appointment for us to come out to you, at home, at work or on the side of the road.',
             image: 'https://img.icons8.com/ios/50/000000/flat-tire.png',
             source: 'icons8.com'
         },
         {
             offer: '24/7 Service Available',
-            information: 'Roadside Service around the clock.',
+            information: 'Roadside Assistance around the clock. Fast and Convenient.',
             image: 'https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-service-automobile-kiranshastry-lineal-kiranshastry.png',
             source: 'icons8.com'
         },
         {
             offer: 'Battery Services',
-            information: 'We can give your battery a jump or we can supply you with a battery from our partners at Interstate Batteries supply us with the batteries your car needs. All at an affordable price.',
+            information: 'We can give your battery a jump or we can supply you with a battery from our partners at Interstate Batteries. They supply us with the battery your car needs. All at an affordable price.',
             image: 'https://img.icons8.com/dotty/80/000000/car-battery.png',
             source: 'icons8.com'
         },
@@ -48,7 +48,7 @@ export default function Offers() {
     return(
         <div id='Services' className='pt-10'>
             <div className='mb-10'>
-                <p className='text-3xl text-center font-semibold tracking-tight leading-10'>
+                <p className='text-3xl  text-center font-semibold tracking-tight leading-10'>
                     <span className='text-red-600 font-extrabold'>Fort Bend Roadside Assistance</span> Services
                 </p>
             </div>

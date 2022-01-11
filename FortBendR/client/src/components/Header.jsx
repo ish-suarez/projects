@@ -15,18 +15,18 @@ export default function Header() {
     const [activeContact, setActiveContact] = useState(false);
 
     return (
-        <header className='antialiased pt-20 lg:flex'>
+        <header className='antialiased pt-20 lg:flex md:items-center'>
             
             {/* Header Container */}
             <div className='px-5 lg:w-1/2 xl:pl-28 2xl:pl-96'>
                 {/* Header Title and info */}
-                <div className='sm:text-center lg:text-left'>
-                    <h2 className='relative text-5xl tracking-tight leading-10 font-extrabold text-red-700' >
+                <div className='text-center sm:text-left lg:text-left'>
+                    <h2 className='relative text-3xl sm:text-5xl tracking-tight leading-10 font-extrabold text-red-700' >
                         Fort Bend Roadside Assistance
                         <br></br>
-                        <span className='text-3xl text-blueGray-600'>Your <span className='text-yellow-600'>Roadside Assistance Needs</span></span>
+                        <span className='text-3xl sm:text-4xl text-blueGray-600'>Your <span className='text-yellow-600'>Roadside Assistance Needs</span></span>
                     </h2>
-                    <p className='mt-5 text-gray-500' >Serving Fort Bend county, Greater Houston Area and surrounding counties. </p>
+                    <p className='sm:text-lg mt-5 text-gray-500' >Serving Fort Bend county, Greater Houston Area and surrounding counties. </p>
                 </div>
                 
                 {/* Learn and Contact Scroll To Buttons */}
@@ -61,7 +61,7 @@ export default function Header() {
             </div>
 
             {/* Image Container */}
-            <div className='sm:drop-shadow-2xl max-h-[230px] sm:max-h-[400px] md:max-h-[420px] 2xl:max-h-[520px] lg:w-1/2 lg:object-cover lg:object-center lg-clip overflow-hidden'>
+            <div className='sm:drop-shadow-2xl max-h-[300px] sm:max-h-[400px] md:max-h-[490px] 2xl:max-h-[520px] lg:w-1/2 lg:object-cover lg:object-center lg-clip overflow-hidden'>
                 <img className='sm:drop-shadow-md' src={FRAVehicle} alt="Fort Bend RA vehicle" />
             </div>
         </header>

@@ -35,9 +35,9 @@ export default function NotableService() {
         <div className=' px-5 pt-10 lg:w-screen lg:flex lg:flex-row-reverse lg:items-center'>
             {/* Header */}
             <div className='lg:w-1/2 lg:pl-10 xl:px-24 xl:pr-48'>
-                <h2 className='uppercase text-center lg:text-left text-red-600'>see who trusted our services</h2>
-                <p className='text-center lg:text-left text-2xl my-3 font-extrabold'>Notable Customers</p>
-                <h3 className='text-sm lg:text-left lg:m-auto text-gray-500'>We have a solid reputation serving local businesses such as: Amazon, Enterprise, Metro Star and Martin's Famous Pastry Shoppe.</h3>
+                <h2 className='uppercase text-center sm:text-lg lg:text-left text-red-600'>see who trusted our services</h2>
+                <p className='text-center sm:text-3xl lg:text-left text-2xl my-3 font-extrabold'>Notable Customers</p>
+                <h3 className='text-sm text-center sm:text-lg lg:text-left lg:m-auto text-gray-500'>We have a solid reputation serving local businesses such as: Amazon, Enterprise, Metro Star and Martin's Famous Pastry Shoppe.</h3>
             </div>
 
             {/* Card */}

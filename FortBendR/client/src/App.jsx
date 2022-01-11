@@ -27,7 +27,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="antialiased  bg-white h-screen">
+    <div className="antialiased bg-white h-screen">
         {/* NavBar */}
         <NavBar />
 

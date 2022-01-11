@@ -6,17 +6,17 @@ import vehicleWork from '../images/vehicleWork.jpeg';
 
 export default function AboutUs() {
     return (
-        <div className='pt-10 lg:flex lg:items-center'>
+        <div className='w-full pt-10 lg:flex lg:items-center 2xl:justify-center'>
             {/* Filler Picture */}
-            <div className='sm:max-h-[250px] lg:max-h-[500px] lg:max-w-[550px] overflow-hidden my-10'>
+            <div className='sm:max-h-[250px] lg:max-h-max lg:w-1/2 2xl:max-h-[400px] overflow-hidden my-10'>
                 <img src={vehicleWork} alt='Working on car' />
             </div>
 
             {/* About Us info */}
-            <div className='px-5 xl:px-20 xl:pr-52'>
-                <h3 className='uppercase text-md text-center lg:text-left tracking-tight leading-10 text-red-500'>Who are we?</h3>
-                <p className='text-2xl text-center lg:text-left tracking-tight mb-5 font-extrabold text-blueGray-800'> About <span className='text-red-600'>Fort Bend Roadside Assistance</span></p>
-                <p className='lg:text-left  text-sm  tracking-tight leading-7 text-gray-500'>
+            <div className='px-5 lg:w-1/2 xl:px-20 xl:pr-52'>
+                <h3 className='uppercase text-md sm:text-lg text-center lg:text-left tracking-tight leading-10 text-red-500'>Who are we?</h3>
+                <p className='text-2xl sm:text-3xl text-center lg:text-left tracking-tight mb-5 font-extrabold text-blueGray-800'> About <span className='text-red-600'>Fort Bend Roadside Assistance</span></p>
+                <p className='lg:text-left text-sm sm:text-lg tracking-tight leading-7 text-gray-500'>
                     Fort Bend Roadside Assistance is a small, family owned and operated 
                     business started by Chris. Years of service and experience gets him the highest praise from his customers.
                     <br></br>
