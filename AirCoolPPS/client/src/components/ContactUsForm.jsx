@@ -42,7 +42,7 @@ export default function ContactUs() {
             <h2 className='text-3xl font-extrabold text-center text-blue-500 mb-5'>
                 Contact us
             </h2>
-            <form className='text-center flex flex-col space-y-10 px-5 py-8'>
+            <form className='text-center flex flex-col space-y-10 px-5 py-8 sm:w-2/3 xl:w-1/3 2xl:w-1/4 sm:m-auto'>
                 <input className='rounded-md drop-shadow-lg focus:ring-0 focus:drop-shadow-xl border-0 focus:bg-gray-100 focus:drop-shadow-none focus:outline-none bg-blueGray-200 border py-3 px-2' 
                     name='firstName'
                     type="text"
@@ -83,7 +83,7 @@ export default function ContactUs() {
                     placeholder='Brief Message...'
                 />
 
-                <button className='focus:outline-none active:shadow-lg hover:bg-blue-600 bg-blue-500 py-3 rounded-lg text-gray-50'>
+                <button className='focus:outline-none active:shadow-lg hover:bg-blue-600 bg-blue-500 py-3 rounded-lg text-gray-50 sm:w-1/2 sm:m-auto'>
                     Send
                 </button>
             </form>

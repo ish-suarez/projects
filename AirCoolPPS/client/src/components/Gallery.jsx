@@ -64,14 +64,17 @@ export default function Gallery() {
         <div className='pt-40'>
             <h4 className='text-3xl font-extrabold text-center'>Air Cool PPS Crew and Memorable Moments</h4>
 
-            {
-                images.map(({image, info}, i) => (
-                    <div key={i} className='my-10'>
-                        <img className='w-full' src={image} alt={info} />
-                        <p className='text-gray-400 text-right pr-4 mx-auto'>{info}</p>
-                    </div>
-                ))
-            }
+            <div className='sm:flex sm:flex-col sm:justify-center sm:items-center'>
+                {
+                    images.map(({image, info}, i) => (
+                        <div key={i} className='my-10 sm:w-1/2'>
+                            <img className='w-full' src={image} alt={info} />
+                            <p className='text-gray-400 text-right pr-4 mx-auto'>{info}</p>
+                        </div>
+                    ))
+                }
+
+            </div>
         </div>
     )
 }

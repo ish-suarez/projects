@@ -6,7 +6,7 @@ const Commercial = lazy(() => import('./Commercial'));
 
 export default function Services() {
     return (
-        <div className='pt-24'>
+        <div className=''>
             <Suspense fallback={<Spinner />}>
                 <Residential />
                 <Commercial />

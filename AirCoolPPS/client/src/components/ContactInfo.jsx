@@ -40,18 +40,20 @@ export default function ContactInfo() {
                     </h3>
 
                 </div>
+                <div className='sm:ml-20'>
+                    <p className='text-sm mb-5 tracking-tight text-blueGray-500'>
+                        WE WILL RESPOND TO ANY EMAILS WITHIN 24 HOURS 
+                        AND ARE ALWAYS AVAILABLE TO SPEAK DURING BUSINESS HOURS.
+                    </p>
 
-                <p className='text-sm mb-5 tracking-tight text-blueGray-500'>
-                    WE WILL RESPOND TO ANY EMAILS WITHIN 24 HOURS 
-                    AND ARE ALWAYS AVAILABLE TO SPEAK DURING BUSINESS HOURS.
-                </p>
+                    <p className='text-sm mb-5 tracking-tight text-blueGray-500'>
+                        Please contact us with any questions you may have. 
+                        We can answer any preliminary inquiries and set up a meeting
+                        to uncover what kind air conditioning system you are hoping
+                        to buy or begin the free evaluation process.
+                    </p>
 
-                <p className='text-sm mb-5 tracking-tight text-blueGray-500'>
-                    Please contact us with any questions you may have. 
-                    We can answer any preliminary inquiries and set up a meeting
-                    to uncover what kind air conditioning system you are hoping
-                    to buy or begin the free evaluation process.
-                </p>
+                </div>
 
             </div>
         </div>

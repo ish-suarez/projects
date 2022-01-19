@@ -31,17 +31,17 @@ export default function Offers() {
     ]
 
     return(
-        <div className='mb-32 mt-16'>
+        <div className='mb-32 mt-16 sm:flex sm:flex-wrap sm:justify-center sm:items-center xl:px-40 '>
             {offers.map((offer, i) => (
-                <div className='mb-10' key={i} >
-                    <div class="max-w-xs mx-auto bg-white rounded-xl p-5 drop-shadow-2xl m-2">
+                <div className='mb-10 sm:w-1/2 xl:w-1/3 2xl:w-1/4' key={i} >
+                    <div class="max-w-xs 2xl:max-w-lg mx-auto bg-white 2xl:bg-transparent rounded-xl p-5 drop-shadow-2xl m-2">
                         <div class='mt-10 flex items-center space-x-3'>
                             <img src={offer.image} alt={`${offer.offer} icon`} />
                             <div class="">
-                                <h3 class="font-semibold text-center text-2xl">{offer.offer}</h3>
+                                <h3 class="font-semibold xl:font-extrabold text-center text-2xl xl:text-4xl">{offer.offer}</h3>
                             </div>
                         </div>
-                        <p className='text-sm text-gray-500 mt-2 text-center leading-6'> 
+                        <p className='text-sm xl:text-lg text-gray-500 mt-2 text-center leading-6'> 
                             {offer.information}
                         </p>
                     </div>

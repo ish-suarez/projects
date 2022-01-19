@@ -15,7 +15,7 @@ export default function App() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if(window.pageYOffset > 700) {
+      if(window.pageYOffset > 400) {
         setVisible(true)
       } else {
         setVisible(false)
@@ -28,7 +28,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="antialiased  bg-white h-screen">
+    <div className="antialiased bg-white h-screen">
         {/* NavBar */}
         <NavBar />
 
