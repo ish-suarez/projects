@@ -31,7 +31,7 @@ export default function Header() {
                 
                 {/* Learn and Contact Scroll To Buttons */}
                 <div id='Info' className='w-full py-10 flex flex-col sm:flex-row py-5 space-y-3 sm:space-x-3 sm:space-y-0 sm:justify-center lg:justify-start '>
-                    <div  className='sm:w-1/3'>
+                    <div  className='sm:w-1/3 2xl:w-2/3'>
                         <button 
                             onClick={() => setActiveContact(!activeContact)} 
                             className='w-full focus:outline-none active:shadow-lg hover:bg-red-600 bg-red-700 py-3 sm:py-4 sm:px-8 rounded-lg text-gray-50'
@@ -48,7 +48,7 @@ export default function Header() {
                             </Collapse>
                         </div>
                     </div>
-                    <div className='sm:w-1/3'>
+                    <div className='sm:w-1/3 2xl:w-2/3'>
                         <button 
                             onClick={() => handleScroll({id: 'WhyUs'})} 
                             className='w-full focus:outline-none active:shadow-lg hover:bg-yellow-300 bg-yellow-500 py-3 sm:py-4 sm:px-8 rounded-lg text-yellow-700'

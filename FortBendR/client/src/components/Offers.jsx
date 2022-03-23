@@ -54,7 +54,7 @@ export default function Offers() {
             </div>
             
             {/* Offer Card Map */}
-            <div className='md:flex md:flex-wrap md:items-center md:justify-center my-5 xl:mx-28 2xl:mx-96'>
+            <div className='md:flex md:flex-wrap md:items-center md:justify-center my-5 xl:mx-28 2xl:mx-80'>
                 {services.map(({offer, information, image}, i) => <OffersCard key={i} offer={offer} information={information} image={image} />)}
             </div>
 

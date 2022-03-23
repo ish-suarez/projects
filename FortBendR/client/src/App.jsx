@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
 import {NavHashLink} from '@xzar90/react-router-hash-link'
 
+// Components
 import Home from './components/Home';
 import NavBar from './components/NavBar';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
+
 
 export default function App() {
 
@@ -27,7 +29,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="antialiased bg-white h-screen">
+    <div className="antialiased bg-white h-full">
         {/* NavBar */}
         <NavBar />
 
