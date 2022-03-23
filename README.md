@@ -1,1 +1,3 @@
-# All projects that are currently in development/ready to be merged to main branch
+Hello, feel free to brows my "portfolio" entries.
+
+## This branch contains WIP projects.
