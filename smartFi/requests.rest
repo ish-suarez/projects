@@ -1,0 +1,68 @@
+###
+
+PUT http://localhost:8000/authenticate/logout/62238d135ca1ac488e5f5f6e
+Authorization: Bearer 
+Content-Type: application/json
+
+
+###
+POST http://localhost:8000/authenticate/signup
+Content-Type: application/json
+
+{
+    "username": "iSuarez",
+    "password": "wordpass1",
+    "email": "is@cc.co"
+}
+
+### 
+POST http://localhost:8000/authenticate/login
+Content-Type: application/json
+
+{
+    "username": "izz",
+    "password": "12345678"
+}
+
+### 
+GET http://localhost:9000/smartfi/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMjE1YjA1NTE3MjY4OTA5NTM0OGVhOSIsInVzZXJuYW1lIjoiaXp6IiwicGFzc3dvcmQiOiIkMmIkMTAkMjAzSzRnUjMwaDdTbm5oTlNSQVJNLnBBRnhYcXZYZmtZQXZXSVdwUlNGLkc4S1lxY0RQRzIiLCJlbWFpbCI6ImlAZi5mIiwiYWNjb3VudHMiOltdLCJwcm9maWxlIjp7ImZpcnN0TmFtZSI6IiIsImxhc3ROYW1lIjoiIiwicGhvbmUiOiIiLCJhZGRyZXNzIjp7Il9pZCI6IjYyMjM2YmViMzM2Nzk0MWI5ODUzYjFhNCIsInN0cmVldDEiOiIiLCJzdHJlZXQyIjoiIiwiY2l0eSI6IiIsInN0YXRlIjoiIiwiY291bnR5IjoiIiwiemlwIjoiIn0sIl9pZCI6IjYyMjE1YjA1NTE3MjY4OTA5NTM0OGVhOCJ9LCJ0b2tlbiI6IiIsImFjdGl2ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMi0wMy0wNFQwMDoxOToxNy42NDdaIiwidXBkYXRlZEF0IjoiMjAyMi0wMy0wNVQxMzo1NTozMS4xNzRaIiwiX192IjowfSwiaWF0IjoxNjQ2NDg4NTU1fQ.Kl2QE0dZhNrxDPBOj0UFxk7E3-qgmrLjgQA6l0hNa-E
+
+###
+DELETE http://localhost:9000/smartfi/account/621291e9dd2bb551d015ffec
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMTA2OTVlYTY2YzQ1MzdmZWM0NDMzYyIsInVzZXJuYW1lIjoiaXN1YXJleiIsInBhc3N3b3JkIjoiJDJiJDEwJFhjQ3puNmg3SGt2T3cvN2VDdm91RU8zb2VrN1FPWWJPc0ZMU25IMG42bDRlMEJBV0ptVVNxIiwiZW1haWwiOiJpc0BjYy5jbyIsImFjY291bnRzIjpbXSwiYWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTE5VDAzOjUxOjU4LjI5NVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTE5VDA0OjQyOjQzLjYzNloiLCJfX3YiOjAsInRva2VuIjoiIn0sImlhdCI6MTY0NTM3OTMwNH0.CMVd8XWD0-iMaXfFubX9WYcyd_uYhvD0zyIC_1p8_4g
+Content-Type: application/json
+
+###
+
+PUT http://localhost:9000/smartfi/user/62238d135ca1ac488e5f5f6e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMWQwZjQxMWIwM2UxNTA4ZjgyNDgxNSIsInVzZXJuYW1lIjoiaXN1YXJleiIsInBhc3N3b3JkIjoiJDJiJDEwJGJzalFEeWJHN2dBazNUNWNhQkN3eGVRQ2wyR3NLNjZRZEVyNzRRbFQxWHlQaTdHSG1sb0JXIiwiZW1haWwiOiJpc0BjYy5jbyIsImFjY291bnRzIjpbXSwiYWN0aXZlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTI4VDE4OjA2OjU3LjY3OVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAzLTAyVDAxOjM2OjIyLjEzOFoiLCJfX3YiOjAsInRva2VuIjoiIn0sImlhdCI6MTY0NjE4NTA0M30.WrEholIefI2rCfJ10W1JNMMSKNwuKEN3ERI-oxzFVes
+Content-Type: application/json
+
+{
+    "accounts": {
+        "checking": {
+            "nickname": "main a",
+            "balance": 500
+        },
+        "saving": {
+            "nickname": "saving up",
+            "balance": 0
+        }
+    }
+}
+
+### 
+
+PUT http://localhost:9000/smartfi/user/62238d135ca1ac488e5f5f6e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMjM4ZDEzNWNhMWFjNDg4ZTVmNWY2ZSIsInVzZXJuYW1lIjoiaXp6IiwicGFzc3dvcmQiOiIkMmIkMTAkL2lhcGY5MEhXUlB5V3A5YWtQeEZtdVNrUlBIZzY4OFQzck5GLkw2L2ZFTnFrV3A5OG0wTWkiLCJlbWFpbCI6ImlAZC5jIiwiYWNjb3VudHMiOnsiY2hlY2tpbmciOnsibmlja25hbWUiOiJtYWluIGEiLCJiYWxhbmNlIjo1MDAsIl9pZCI6IjYyMzI0NTRhNWY5MGQwNmZiOTNmY2YxNyJ9LCJzYXZpbmciOnsibmlja25hbWUiOiJzYXZpbmcgdXAiLCJiYWxhbmNlIjowLCJfaWQiOiI2MjMyNDU0YTVmOTBkMDZmYjkzZmNmMTgifSwiX2lkIjoiNjIzMjQ1NGE1ZjkwZDA2ZmI5M2ZjZjE2In0sInByb2ZpbGUiOnsiZmlyc3ROYW1lIjoiSXNtYWVsIiwibGFzdE5hbWUiOiJTdWFyZXoiLCJwaG9uZSI6IiIsImFkZHJlc3MiOnsic3RyZWV0MSI6IiIsInN0cmVldDIiOiJPcHRpb25hbCIsImNpdHkiOiIiLCJzdGF0ZSI6IiIsImNvdW50eSI6IiIsInppcCI6IiIsIl9pZCI6IjYyMjNhN2EwYWU4MWNmOGJiZTIwNzNjYiJ9LCJfaWQiOiI2MjIzYTdhMGFlODFjZjhiYmUyMDczY2MifSwidG9rZW4iOiIiLCJhY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjItMDMtMDVUMTY6MTc6MjMuNDExWiIsInVwZGF0ZWRBdCI6IjIwMjItMDMtMTZUMjA6MTU6MjguMTExWiIsIl9fdiI6MH0sImlhdCI6MTY0NzQ2MTczNn0.iPzo8nUntS1qCCkNegxvmCNkyz_2M_jB5EtcGme65nk
+Content-Type: application/json
+
+{
+    
+    "firstName": "izzy",
+    "lastName": "Suarez",
+    "phone": ""
+
+}
+
