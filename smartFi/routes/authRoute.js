@@ -21,8 +21,8 @@ authRouter.post('/signup', (req, res, next) => {
                 res.status(500);
                 return next(err);
             }
-            savedUser.generateAccessToken();
-            return res.status(201).send({user: savedUser.withoutPassword()});
+            const token = savedUser.generateAccessToken();
+            return res.status(201).send({token, user: savedUser.withoutPassword()});
         });
     });
 });

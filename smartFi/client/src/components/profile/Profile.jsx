@@ -129,7 +129,7 @@ export default function Profile() {
                         >
                             <i className="fa-regular fa-pen-to-square hover:shadow-xl hover:border-3 hover:border-gray-600 hover:text-gray-400 text-gray-600 border-2 border-gray-100 p-1 rounded-lg"></i>
                         </button>
-                        <p className='py-3 text-center text-2xl font-semibold text-neutral-900'>Personal Information</p>
+                        <p className='py-3 text-center text-2xl font-bold text-neutral-900'>Personal Information</p>
                         <div className='text-center flex flex-col space-y-3 flex-wrap justify-center '>
                             {
                                 profileData.map((item, i) => (
@@ -173,7 +173,7 @@ export default function Profile() {
                             
                         </div>
                         <button className='ml-64 mt-3' onClick={() => setEditAddress(!editAddress)}><i className="fa-regular fa-pen-to-square hover:shadow-xl hover:border-3 hover:border-gray-600 hover:text-gray-400 text-gray-600 border-2 border-gray-100 p-1 rounded-lg"></i></button>
-                        <p className='text-2xl font-semibold text-neutral-900'>Address</p>
+                        <p className='text-2xl font-bold text-neutral-900'>Mailing Address</p>
                         <div className='flex flex-col flex-wrap space-y-3 justify-center items-center'>
                             {
                                 addressData.map((item, i) => (

@@ -30,6 +30,7 @@ export default function Auth() {
     const handleSignup = e => {
         e.preventDefault();
         signup(input);
+        console.log('Hello?')
     }
 
     const changeForm = () => {
@@ -80,7 +81,6 @@ export default function Auth() {
                         <p className='text-sm text-center mt-4 cursor-pointer' onClick={() => changeForm()}>Not a Member?</p>
                     </div>
                 }
-
             </div>
         </div>
     )

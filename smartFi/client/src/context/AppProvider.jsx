@@ -22,6 +22,17 @@ export default function AppProvider(props) {
     const authErr = errMsg => setUserState(prevState => ({...prevState, errMsg}));
     const resetErr = () => setUserState(prevState => ({...prevState, errMsg: ''}));
 
+    const signup = (credentials) => {
+        auth.post(`/signup`, credentials)
+            .then(res => {
+                console.log(res)
+                const {user, token} = res.data
+                localStorage.setItem('token', token)
+                localStorage.setItem('user', JSON.stringify(user))
+                setUserState(prevState => ({...prevState, user, token}))
+            })
+            .catch(err => authErr(err.response.data.errMsg))
+    }
 
     // Functions to Gain Access to Server and Database
     const login = (credentials) => {
@@ -30,7 +41,6 @@ export default function AppProvider(props) {
                 const {user, token} = res.data
                 localStorage.setItem('user', JSON.stringify(user));
                 localStorage.setItem('token', token)
-                console.log(token)
                 setUserState(prevState => ({...prevState, user, token}));                
             })
             .catch(err => authErr(err.response.data.errMsg));
@@ -46,16 +56,6 @@ export default function AppProvider(props) {
             .catch(err => authErr(err.response.data.errMsg))
     }
     
-    const signup = (credentials) => {
-        auth.post(`/signup`, credentials)
-            .then(res => {
-                const {user, token} = res.data
-                localStorage.setItem('token', token)
-                localStorage.setItem('user', JSON.stringify(user))
-                setUserState(prevState => ({...prevState, user, token}))
-            })
-            .catch(err => authErr(err.response.data.errMsg))
-    }
 
     const getUserData = (userId) => {
         userApi.get(`/user/${userId}`)
