@@ -40,11 +40,12 @@ export default function NavBar({logout}) {
                 {
                     !user.token ? 
                         <Link to='/home' className='flex items-center 2xl:pl-8'>
-                            <img className='w-10' src={Logo} alt="Smartfi Logo" />
+                            <img className='w-12' src={Logo} alt="Smartfi Logo" />
                             <h1 className='font-bold text-lg text-neutral-50 hover:text-gray-500'>martFi</h1>
                         </Link>
                     : 
-                        <Link to='/home' className='2xl:pl-8'> 
+                        <Link to='/home' className='flex items-center space-x-2 2xl:pl-8'> 
+                            <img className='w-12' src={Logo} alt="Smartfi Logo" />
                             <h2 className='font-bold text-lg text-neutral-50 hover:text-gray-500' >{dayMessage(time)}, {user.username}</h2>
                         </Link> 
                 }
