@@ -1,8 +1,9 @@
 # LinkWithMe
 ## Social media application
 
-Using MySQL, React, Express and node.
+Using MySQL, React, Express and Node. 
 
+application consists of full CRUD operations along with handling a user sign up and sign in
 ## Start application
 
 To start the main server
