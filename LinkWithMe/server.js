@@ -5,9 +5,33 @@ const morgan = require('morgan');
 const expressJwt = require('express-jwt');
 const cors = require('cors');
 const app = express(); // Application Variable
+const db = require('./models');
+const Role = db.role;
+db.sequelize.sync({force: true}).then(() => {
+    console.log('Drop and Resync DB');
+    initial()
+})
 const corsOptions = {
     origin: 'http://localhost:7000'
 };
+
+function initial() {
+    Role.create({
+        id: 1,
+        name: "user"
+    });
+
+    Role.create({
+        id: 2,
+        name: "moderator"
+    });
+
+    Role.create({
+        id: 3,
+        name: "admin"
+    });
+}
+
 
 // Middleware
 app.use(cors(corsOptions));
