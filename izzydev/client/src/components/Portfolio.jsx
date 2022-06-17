@@ -18,9 +18,10 @@ export default function Portfolio() {
         Portfolio
       </h4>
 
-      <div className="pb-10 px-5 m-auto md:flex md:flex-col md:items-center lg:flex lg:flex-wrap lg:justify-center lg:space-x-28 xl:space-x-10 2xl:space-x-2 2xl:flex-nowrap">
+      <div className="pb-10 px-5 m-auto md:flex md:flex-col md:items-center lg:items-start lg:flex-row lg:flex-wrap lg:justify-center lg:space-x-28 xl:space-x-10 2xl:space-x-2 2xl:flex-nowrap">
         <div className="md:w-1/2 lg:w-1/3 xl:w-1/4 ">
-          <div className=" my-10 h-auto -space-y-40 2xl:h-64 2xl:w-full 2xl:flex 2xl:justify-center 2xl:-space-x-48 2xl:space-y-14 ">
+
+          <div className=" my-10 h-auto -space-y-40 2xl:h-48 2xl:w-full 2xl:flex 2xl:justify-center 2xl:-space-x-24 2xl:space-y-14 ">
             <img
               loading="lazy"
               className="lg:w-full 2xl:w-5/6 border shadow-2xl"
@@ -46,7 +47,7 @@ export default function Portfolio() {
         </div>
 
         <div className="md:w-1/2 lg:w-1/3 xl:w-1/4">
-          <div className="my-10 h-auto -space-y-40 2xl:h-64 2xl:w-full 2xl:flex 2xl:justify-center 2xl:-space-x-48 2xl:space-y-14">
+          <div className="my-10 h-auto -space-y-40  2xl:h-48  2xl:w-full 2xl:flex 2xl:justify-center  2xl:-space-x-24 2xl:space-y-14">
             <img
               loading="lazy"
               className="2xl:w-5/6 border shadow-2xl"
