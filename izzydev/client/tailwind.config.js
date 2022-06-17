@@ -1,12 +1,15 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
       opacity: ['disabled'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
