@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { fontMatch } from '../../lib';
 
 const navigationLinks = [
     {
@@ -30,14 +32,13 @@ const positions = [
 ];
 
 
-
 const NavLink = ({ to, children } )=> {
     return (
         <Link scroll href={to} as={to}>{ children }</Link>
     );
 }
 
-const MobileNav = ({ open, setOpen, position }) => {
+const MobileNav = ({ open, setOpen, position, pathname }) => {
 
     return (
         <div className={`z-20 py-4 fixed top-0 bg-zinc-300/80 left-0 w-full transform ${open ? "translate-y-0" : "-translate-y-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
@@ -45,15 +46,15 @@ const MobileNav = ({ open, setOpen, position }) => {
                 <Link href='/#' as={'/#'} >
                     <div className='px-4 cursor-pointer w-9/12 flex flex-col text-xl font-semibold text-zinc-700'>
                         <span className="border-b-2 border-zinc-300 font-fullstack">Izzy Dev</span>
-                        <span className={`text-sm ml-7 ${position.name.includes('Frontend') ? 'font-front-end' : position.name.includes('Software') ? 'font-software' : position.name.includes('Backend') ? 'font-backend' : position.name.includes('Full') ? 'font-fullstack' : ''}`}>{position.name}</span>
+                        <span className={`text-sm ml-7 ${fontMatch(position.name)}`}>{position.name}</span>
                     </div>
                 </Link>
 
-                <div className="flex flex-col w-full">
+                <div className="flex flex-col w-full py-2">
                     {
                         navigationLinks.map(({ to, linkName }, i) => (
                             <NavLink key={linkName} to={to}>
-                                <p className='cursor-pointer pl-7 text-zinc-800 transition duration-200 ease-in-out text-xl font-medium my-1 hover:text-zinc-100 hover:bg-zinc-300' onClick={() => setTimeout(open => {setOpen(open)}, 100)}>{ linkName }</p>
+                                <p className={`${pathname === to ? 'hidden' : ''} font-fullstack cursor-pointer py-4 pl-7 text-zinc-800 transition duration-200 ease-in-out text-xl font-medium hover:text-zinc-100 hover:bg-zinc-300`} onClick={() => setTimeout(open => {setOpen(open)}, 100)}>{ linkName }</p>
                             </NavLink>
                         ))
                     }
@@ -107,17 +108,21 @@ export default function Navbar() {
         setPosition(positions[index]);
     }, [index])
 
+
+    const { pathname } = useRouter()
+
+
     return (
         <nav className={` fixed bg-gray-50/30 backdrop-blur-sm ${open && 'bg-transparent'} ${!show && 'hidden'} w-full z-40 flex filter drop-shadow-md px-4 py-4 h-20 items-center
                         md:justify-between`}>
-            <MobileNav position={position} open={open} setOpen={setOpen} />
+            <MobileNav pathname={pathname} position={position} open={open} setOpen={setOpen} />
             <Link className={``} href='/'>
                 <div className={`font-fullstack cursor-pointer w-9/12 flex flex-col text-xl font-semibold text-zinc-700 
                                 ${open ? 'hidden transition ease-in-out' : ''}
                                 sm:w-1/2
                                 md:w-2/5`}>
                     <span className="border-b-2 border-zinc-300">Izzy Dev</span>
-                    <span className={`text-sm ml-7 ${position.name.includes('Frontend') ? 'font-front-end' : position.name.includes('Software') ? 'font-software' : position.name.includes('Backend') ? 'font-backend' : position.name.includes('Full') ? 'font-fullstack' : ''}`}>{position.name}</span>
+                    <span className={`text-sm ml-7 ${fontMatch(position.name)}`}>{position.name}</span>
                 </div>
             </Link>
 
@@ -136,15 +141,12 @@ export default function Navbar() {
                     {
                         navigationLinks.map(({ to, linkName }) => (
                             <NavLink key={linkName} to={to}>
-                                <p className='cursor-pointer text-white text-xs hover:text-red-300 transition duration-300 ease-in-out '>{linkName}</p>
+                                <p className={`${pathname === to ? 'hidden' : ''} cursor-pointer text-white text-xs hover:text-zinc-500 transition duration-300 ease-in-out `}>{linkName}</p>
                             </NavLink>
                         ))
                     }
                 </div>
             </div>
-
-    
-
         </nav>
     )
 }

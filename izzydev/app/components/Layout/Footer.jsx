@@ -28,7 +28,7 @@ const FooterLink = ({ to, children }) => (
 const SocialMedia = () => (
     <div className='px-3'>
         {footerLinks.map(({icon, name, webAddress}) => (
-            <FooterLink to={webAddress}>
+            <FooterLink key={name} to={webAddress}>
                 <Image priority className='cursor-pointer hover:scale-105' src={icon} width={24} height={24} alt={name} />
             </FooterLink>
         ))}
