@@ -12,7 +12,9 @@
         "Git",
         `API's`,
         "Axios",
-        'NextJs'
+        'NextJs',
+        "Tailwind",
+        "CSS"
     ],
     frontInfo: `
     
@@ -50,14 +52,15 @@ const FullStackLanguages = ({language}) => (
 const FullStackCard = ({icon, languages, info, name}) => {
 
     return (
-        <div className="md:w-1/2 md:px-2 flex flex-col flex-wrap justify-center items-center px-3">
+        <div className="md:w-1/2 md:px-2 flex flex-col flex-wrap justify-center items-center px-3
+                        md:justify-start">
             <div className="flex justify-center items-center mb-5 font-fullstack text-zinc-50">
                 <img src={icon} loading="lazy" alt="Dev Icon" />
                 <h4 className="text-3xl sm:text-3xl md:text-4xl xl:text-5xl font-bold my-4 text-blueGray-600">
                     {name}
                 </h4>
             </div>
-            <div className="flex flex-wrap justify-center items-center mb-3">
+            <div className="flex flex-wrap justify-center items-center mb-3 max-w-md">
                 {languages.map((language, i) => (
                     <FullStackLanguages key={i} language={language} />
                 ))}
@@ -79,22 +82,27 @@ export default function() {
     fullStackInfo.backend;
     
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center space-y-20 md:space-y-12 h-full">
-            {/* FrontEnd info container */}
-            <FullStackCard
-            name={frontName}
-            languages={frontLanguages}
-            icon={frontIcon}
-            info={frontInfo}
-            />
-            
-            {/* Backend info container */}
-            <FullStackCard
-            name={backName}
-            languages={backLanguages}
-            icon={backIcon}
-            info={backInfo}
-            />
+        <div className=" relative flex flex-col md:flex-row items-center justify-center space-y-20 h-full">
+            <h2 className="absolute top-5 text-zinc-200 text-4xl font-fullstack">My skills</h2>
+            <div className="flex flex-col
+                            md:flex-row">
+                {/* FrontEnd info container */}
+                <FullStackCard
+                name={frontName}
+                languages={frontLanguages}
+                icon={frontIcon}
+                info={frontInfo}
+                />
+                
+                {/* Backend info container */}
+                <FullStackCard
+                name={backName}
+                languages={backLanguages}
+                icon={backIcon}
+                info={backInfo}
+                />
+
+            </div>
         </div>
     )
 }

@@ -18,11 +18,10 @@ export default function Layout({children}) {
                 <meta name="og:title" content={websiteTitle} />
             </Head>
             <Navbar />
-            <main className='z-0' >
+            <main className='z-0 h-full' >
                 {children}
             </main>
             <Footer />
-
         </div>
     )
 }

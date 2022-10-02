@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import { fontMatch } from '../lib';
 
@@ -36,11 +36,14 @@ const Header = () => {
         <p className='text-5xl text-zinc-200 h-52'>
           Hi, I am <span className='font-name text-zinc-50 text-4xl'>Hector</span>, and I am a <br></br><span className={`${fontMatch(position.name)}`}>{position.name}</span>.
         </p>
-        <button className=' transition duration-500 ease-in-out text-xl text-zinc-100 self-end bg-neutral-200/40 px-3 py-1 rounded-sm 
-                          hover:scale-105 hover:shadow-md hover:shadow-neutral-100 hover:text-zinc-50 hover:bg-neutral-300/40
-                          sm:mr-20'>
-          Contact me
-        </button>
+        <Link href={'/ContactMe'}>
+          <button className=' transition duration-500 ease-in-out text-xl text-zinc-100 self-end bg-neutral-200/40 px-3 py-1 rounded-sm 
+                            hover:scale-105 hover:shadow-md hover:shadow-neutral-100 hover:text-zinc-50 hover:bg-neutral-300/40
+                            sm:mr-20'>
+            Contact me
+          </button>
+
+        </Link>
       </div>
     </header>
   )
@@ -63,7 +66,7 @@ const MyOverview = () => {
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center h-full
+    <div className='flex flex-col items-center h-full py-5
                     sm:items-end sm:h-screen
                     '>
         <Header />

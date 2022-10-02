@@ -9,16 +9,20 @@ const navigationLinks = [
         linkName: 'Home'
     },
     {
-        to: '/Portfolio',
-        linkName: 'Portfolio'
+        to: '/MySkills',
+        linkName: 'My Skills'
     },
     {
-        to: '/#AboutUs',
-        linkName: 'About Us'
+        to: '/IzBlogs',
+        linkName: 'IzBlogs'
     },
     {
-        to: '/#ContactUs',
-        linkName: 'Contact Us'
+        to: '/MyWork',
+        linkName: 'My Work'
+    },
+    {
+        to: '/ContactMe',
+        linkName: 'Contact Me'
     },
 
 ];
